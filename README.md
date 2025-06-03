@@ -97,11 +97,6 @@ node exersive-1.js
 Este script de Node.js permite ingresar las edades de 10 personas a través de la línea de comandos (CLI) y luego analiza y muestra estadísticas como cuántas personas son menores, adultas, adultos mayores, así como la edad mínima, máxima y el promedio.
 
 ---
-## 🚀 Tecnologías utilizadas
-- Node.js
-- Módulo nativo `readline/promises` para entrada de datos asíncrona desde consola
----
-
 ## ✅ Funcionalidades
 - Solicita al usuario ingresar la edad de 10 personas.
 - Valida que cada edad esté entre 1 y 120 años.
@@ -253,10 +248,6 @@ Ingrese el numero 5: 12
 # 👤 Registro y Consulta de Personas - Node.js CLI
 Este script permite registrar, almacenando información básica y sus canciones favoritas. También permite consultar los datos por índice.
 
----
-## 📦 Tecnologías utilizadas
-- Node.js
-- Módulo `readline/promises`
 ---
 ## 🧩 Estructura del Código
 ### 1. Clase `PersonProps`
