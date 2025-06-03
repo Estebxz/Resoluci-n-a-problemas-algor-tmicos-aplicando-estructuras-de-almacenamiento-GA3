@@ -1,7 +1,7 @@
-const readline = require("node:readline");
-const { stdin: input, stdout: output } = require("node:process");
+import { createInterface } from "node:readline";
+import { stdin as input, stdout as output } from "node:process";
 
-const rl = readline.createInterface({ input, output });
+const rl = createInterface({ input, output });
 
 console.info("Hola, ¿qué desea calcular?");
 console.info("1. Área");
@@ -52,27 +52,27 @@ const figures = {
     area: (base, altura) => (base * altura) / 2,
     perimetro: (a, b, c) => a + b + c,
     required_data: (type, callback) => {
-        if (type === "area") {
-            rl.question("Ingresa el tamaño de la altura en cm", (altura) => {
-                rl.question("Ingrese el tamaña base en cm", (base) => {
-                    const b = parseFloat(base)
-                    const h = parseFloat(altura)
-                    callback(b, h)
-                })
-            })
-        } else {
-            rl.question("Ingrese el primer lado en cm", (firstLng) => {
-                rl.question("ingrese el segundo lado en cm", (secondLng) => {
-                    rl.question("Ingrese el tercer lado en cm", (thirdLng) => {
-                        const a = parseFloat(firstLng)
-                        const b = parseFloat(secondLng)
-                        const c = parseFloat(thirdLng)
-                        callback(a, b, c)
-                    })
-                })
-            })
-        }
-    }
+      if (type === "area") {
+        rl.question("Ingresa el tamaño de la altura en cm: ", (altura) => {
+          rl.question("Ingrese el tamaña base en cm: ", (base) => {
+            const b = parseFloat(base);
+            const h = parseFloat(altura);
+            callback(b, h);
+          });
+        });
+      } else {
+        rl.question("Ingrese el primer lado en cm: ", (firstLng) => {
+          rl.question("ingrese el segundo lado en cm: ", (secondLng) => {
+            rl.question("Ingrese el tercer lado en cm: ", (thirdLng) => {
+              const a = parseFloat(firstLng);
+              const b = parseFloat(secondLng);
+              const c = parseFloat(thirdLng);
+              callback(a, b, c);
+            });
+          });
+        });
+      }
+    },
   },
   rectangulo: {
     area: (base, altura) => base * altura,
